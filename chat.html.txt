@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Perguntas e Respostas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #pergunta {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #resposta {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assistente de Perguntas e Respostas</h1>
+        <label for="pergunta">Faça uma pergunta:</label>
+        <input type="text" id="pergunta" placeholder="Digite sua pergunta aqui">
+        <button onclick="responderPergunta()">Enviar</button>
+        <div id="resposta"></div>
+    </div>
+
+    <script>
+        function responderPergunta() {
+            const pergunta = document.getElementById("pergunta").value.toLowerCase();
+            let resposta = "";
+
+            if (pergunta.includes("previsão do tempo para hoje")) {
+                resposta = "A previsão do tempo para hoje é de sol com temperaturas entre 25°C e 30°C.";
+            } else if (pergunta.includes("cozinhar lasanha")) {
+                resposta = "Para cozinhar lasanha, siga estas etapas: prepare a massa, faça o molho, monte as camadas e asse no forno a 180°C por 30-40 minutos.";
+            } else if (pergunta.includes("sintomas da gripe")) {
+                resposta = "Os sintomas comuns da gripe incluem febre, calafrios, dor de garganta, congestão nasal, dor de cabeça, fadiga e dores musculares.";
+            } else if (pergunta.includes("20% de 150")) {
+                const resultado = 0.2 * 150;
+                resposta = `20% de 150 é igual a ${resultado}.`;
+            } else if (pergunta.includes("escreve 'família' em inglês")) {
+                resposta = "A palavra 'família' em inglês é 'family'.";
+            } else if (pergunta.includes("filmes em cartaz no cinema")) {
+                resposta = "Para verificar os filmes em cartaz no cinema, recomendo verificar os horários e programação do cinema local ou usar um aplicativo de cinema.";
+            } else if (pergunta.includes("reserva em um resort")) {
+                resposta = "Para fazer uma reserva em um resort, entre em contato diretamente com o resort de sua escolha ou use um serviço de reserva online.";
+            } else if (pergunta.includes("cartão de débito")) {
+                resposta = "Um cartão de débito é um cartão bancário que permite que você faça pagamentos diretamente da sua conta bancária e também pode ser usado para retirar dinheiro de caixas eletrônicos.";
+            } else if (pergunta.includes("café da manhã saudável")) {
+                resposta = "Um café da manhã saudável pode incluir alimentos como aveia, frutas, iogurte, ovos e pão integral. Evite alimentos ricos em açúcar e gorduras saturadas.";
+            } else if (pergunta.includes("benefícios da terapia em grupo")) {
+                resposta = "Os benefícios da terapia em grupo incluem suporte social, compartilhamento de experiências, desenvolvimento de habilidades sociais e econômicas, e a oportunidade de se relacionar com outras pessoas que enfrentam desafios semelhantes.";
+            } else if (pergunta.includes("planejar uma viagem de mochila")) {
+                resposta = "Para planejar uma viagem de mochila, escolha um destino, prepare uma lista de itens essenciais, selecione uma mochila adequada e planeje sua rota e acomodações.";
+            } else if (pergunta.includes("diferença entre um vírus e uma bactéria")) {
+                resposta = "A principal diferença entre um vírus e uma bactéria é que os vírus não são células completas, enquanto as bactérias são organismos unicelulares. Os vírus precisam de um hospedeiro para se reproduzir, enquanto as bactérias podem se reproduzir independentemente.";
+            } else if (pergunta.includes("currículo vitae")) {
+                resposta = "Um currículo vitae (CV) é um documento que detalha sua educação, experiência profissional, habilidades e realizações. É usado principalmente para solicitar empregos ou oportunidades acadêmicas.";
+            } else if (pergunta.includes("organizar documentos financeiros")) {
+                resposta = "Para organizar seus documentos financeiros, crie pastas para contas, recibos, extratos bancários e documentos fiscais. Digitalize documentos importantes e mantenha registros atualizados.";
+            } else if (pergunta.includes("sintomas da síndrome do intestino irritável")) {
+                resposta = "Os sintomas da síndrome do intestino irritável (SII) incluem dor abdominal, inchaço, gases, diarreia e constipação. Os sintomas podem variar de leve a grave.";
+            } else if (pergunta.includes("reserva em um carro de aluguel")) {
+                resposta = "Para fazer uma reserva em um carro de aluguel, você pode entrar em contato com empresas de aluguel de carros diretamente ou usar sites e aplicativos de reserva de carros.";
+            } else if (pergunta.includes("hipoteca")) {
+                resposta = "Uma hipoteca é um empréstimo usado para comprar uma casa. A casa serve como garantia para o empréstimo, e você paga a hipoteca ao longo do tempo, incluindo juros.";
+            } else if (pergunta.includes("benefícios da meditação mindfulness")) {
+                resposta = "Os benefícios da meditação mindfulness incluem redução do estresse, melhora da concentração, aumento da consciência e melhor qualidade de vida geral.";
+            } else if (pergunta.includes("plano de marketing")) {
+                resposta = "Um plano de marketing é um documento que define estratégias e táticas para promover um produto ou serviço. Inclui análises de mercado, objetivos e estratégias de promoção.";
+            } else if (pergunta.includes("diferença entre coaching e aconselhamento psicológico")) {
+                resposta = "O coaching é focado em ajudar as pessoas a atingirem metas específicas e melhorar habilidades pessoais ou profissionais, enquanto o aconselhamento psicológico trata de questões emocionais, mentais e psicológicas.";
+            } else if (pergunta.includes("sustentabilidade")) {
+                resposta = "Sustentabilidade envolve ações e práticas que visam preservar o meio ambiente e garantir que os recursos naturais estejam disponíveis para as gerações futuras.";
+            } else if (pergunta.includes("sopa de legumes")) {
+                resposta = "Para fazer uma sopa de legumes saudável, você pode usar ingredientes como cenoura, batata, cebola, brócolis e caldo de vegetais. Cozinhe os legumes, bata no liquidificador e tempere a gosto.";
+            } else if (pergunta.includes("sintomas da asma")) {
+                resposta = "Os sintomas da asma incluem falta de ar, chiado no peito, tosse e sensação de aperto no peito. A asma pode variar de leve a grave.";
+            } else if (pergunta.includes("habilidade de tomar decisões")) {
+                resposta = "Você pode melhorar sua habilidade de tomar decisões por meio da prática, coleta de informações, análise de prós e contras e consideração das consequências.";
+            } else if (pergunta.includes("diferença entre uma dieta paleo e uma dieta cetogênica")) {
+                resposta = "A dieta paleo enfatiza alimentos não processados e elimina grãos e laticínios, enquanto a dieta cetogênica é rica em gorduras e extremamente baixa em carboidratos. Ambas visam a perda de peso e a saúde.";
+            } else if (pergunta.includes("marketing de conteúdo")) {
+                resposta = "Marketing de conteúdo é uma estratégia de marketing que envolve a criação e distribuição de conteúdo relevante para atrair e engajar o público-alvo.";
+            } else if (pergunta.includes("ritmo de estudo")) {
+                resposta = "Para organizar seu ritmo de estudo, crie um cronograma, estabeleça metas diárias ou semanais e evite procrastinação.";
+            } else if (pergunta.includes("benefícios da terapia de casal")) {
+                resposta = "Os benefícios da terapia de casal incluem melhor comunicação, resolução de conflitos, fortalecimento do relacionamento e compreensão mútua.";
+            } else if (pergunta.includes("viagem de aventura")) {
+                resposta = "Para planejar uma viagem de aventura, escolha um destino emocionante, planeje atividades emocionantes, esteja preparado para desafios e mantenha-se seguro.";
+            } else if (pergunta.includes("diferença entre um contrato e um acordo")) {
+                resposta = "Um contrato é um acordo legalmente vinculativo que estabelece direitos e obrigações específicos, enquanto um acordo pode ser menos formal e pode não ter a mesma força legal.";
+            } else if (pergunta.includes("cartão de crédito")) {
+                resposta = "Um cartão de crédito é uma linha de crédito que permite que você faça compras a crédito. Você paga as despesas no final do mês ou em parcelas, com juros.";
+            } else if (pergunta.includes("smoothie saudável")) {
+                resposta = "Um smoothie saudável pode incluir ingredientes como frutas, vegetais, iogurte, leite e proteína em pó. Evite adicionar açúcar refinado.";
+            } else if (pergunta.includes("sintomas da artrite")) {
+                resposta = "Os sintomas da artrite incluem dor nas articulações, inchaço, rigidez e limitações de movimento. Existem diferentes tipos de artrite.";
+            } else if (pergunta.includes("habilidade de falar em público")) {
+                resposta = "Você pode melhorar sua habilidade de falar em público praticando, preparando discursos, controlando o nervosismo e recebendo feedback.";
+            } else if (pergunta.includes("branding")) {
+                resposta = "Branding envolve a criação de uma identidade de marca única, incluindo logotipo, valores, missão e imagem para atrair e fidelizar clientes.";
+            } else if (pergunta.includes("plano de negócios")) {
+                resposta = "Um plano de negócios é um documento que descreve a visão, metas, estratégias e plano financeiro de uma empresa.";
+            } else if (pergunta.includes("reciclagem")) {
+                resposta = "Reciclagem é o processo de coletar e transformar materiais descartados em novos produtos, reduzindo assim o desperdício e o impacto ambiental.";
+            } else if (pergunta.includes("salada nutritiva")) {
+                resposta = "Uma salada nutritiva pode incluir uma variedade de vegetais, proteínas magras, nozes e um molho saudável.";
+            } else if (pergunta.includes("sintomas da doença de Alzheimer")) {
+                resposta = "Os sintomas da doença de Alzheimer incluem perda de memória, confusão, desorientação, dificuldade em realizar tarefas cotidianas e alterações de personalidade.";
+            } else if (pergunta.includes("organizar guarda-roupa")) {
+                resposta = "Para organizar seu guarda-roupa, faça uma limpeza, categorize roupas, use organizadores e mantenha-o arrumado.";
+            } else if (pergunta.includes("diferença entre um diploma e um certificado")) {
+                resposta = "Um diploma é uma credencial de conclusão de um curso superior, enquanto um certificado é uma credencial de conclusão de um programa de estudo mais curto.";
+            } else if (pergunta.includes("fundo de investimento")) {
+                resposta = "Um fundo de investimento é uma pool de dinheiro de vários investidores usado para comprar uma variedade de títulos e ativos.";
+            } else if (pergunta.includes("lanche ao ar livre")) {
+                resposta = "Para fazer um lanche ao ar livre, escolha alimentos portáteis, como sanduíches, frutas e snacks saudáveis, e escolha um local agradável.";
+            } else if (pergunta.includes("benefícios da terapia ocupacional")) {
+                resposta = "Os benefícios da terapia ocupacional incluem melhora na independência funcional, desenvolvimento de habilidades motoras e apoio para superar desafios físicos ou cognitivos.";
+            } else if (pergunta.includes("plano de gerenciamento de projetos")) {
+                resposta = "Um plano de gerenciamento de projetos é um documento que descreve os objetivos, escopo, cronograma, orçamento e recursos necessários para concluir um projeto com sucesso.";
+            } else if (pergunta.includes("energia eólica")) {
+                resposta = "Energia eólica é a energia gerada pela força do vento, geralmente capturada por meio de turbinas eólicas.";
+            } else if (pergunta.includes("habilidade de resolver problemas")) {
+                resposta = "Você pode melhorar sua habilidade de resolver problemas por meio de análise crítica, identificação de soluções, tomada de decisões informadas e prática.";
+            } else if (pergunta.includes("sintomas da síndrome de Burnout")) {
+                resposta = "Os sintomas da síndrome de Burnout incluem exaustão física e mental, falta de motivação, diminuição do desempenho no trabalho e sentimentos de desesperança.";
+            } else if (pergunta.includes("fazer uma reserva em um resort")) {
+                resposta = "Para fazer uma reserva em um resort, entre em contato diretamente com o resort de sua escolha, visite o site do resort ou use serviços de reserva online.";
+            } else if (pergunta.includes("cartão de débito")) {
+                resposta = "Um cartão de débito é um cartão bancário que permite fazer compras e retirar dinheiro diretamente da sua conta bancária.";
+            } else if (pergunta.includes("café da manhã saudável")) {
+                resposta = "Um café da manhã saudável pode incluir alimentos como frutas, ovos, aveia, iogurte e pães integrais. Evite alimentos ricos em açúcar e gordura.";
+            } else if (pergunta.includes("benefícios da terapia em grupo")) {
+                resposta = "Os benefícios da terapia em grupo incluem apoio social, compartilhamento de experiências, desenvolvimento de habilidades interpessoais e a oportunidade de se conectar com outros.";
+            } else if (pergunta.includes("planejar uma viagem de mochila")) {
+                resposta = "Para planejar uma viagem de mochila, escolha um destino, faça uma lista de itens essenciais, selecione uma mochila adequada e planeje sua rota e acomodações.";
+            } else if (pergunta.includes("diferença entre um vírus e uma bactéria")) {
+                resposta = "A principal diferença entre um vírus e uma bactéria é que os vírus não são células completas e precisam de um hospedeiro para se reproduzir, enquanto as bactérias são organismos unicelulares.";
+            } else if (pergunta.includes("currículo vitae")) {
+                resposta = "Um currículo vitae (CV) é um documento que detalha sua educação, experiência, habilidades e realizações, geralmente usado ao se candidatar a empregos ou oportunidades acadêmicas.";
+            } else if (pergunta.includes("organizar documentos financeiros")) {
+                resposta = "Para organizar documentos financeiros, crie pastas para contas, recibos, extratos bancários e documentos fiscais. Digitalize documentos importantes e mantenha registros atualizados.";
+            } else if (pergunta.includes("sintomas da síndrome do intestino irritável")) {
+                resposta = "Os sintomas da síndrome do intestino irritável (SII) incluem dor abdominal, inchaço, gases, diarreia e constipação. Os sintomas podem variar de intensidade.";
+            } else if (pergunta.includes("reserva em um carro de aluguel")) {
+                resposta = "Para fazer uma reserva em um carro de aluguel, você pode entrar em contato com empresas de aluguel de carros diretamente ou usar sites e aplicativos de reserva de carros.";
+            } else if (pergunta.includes("hipoteca")) {
+                resposta = "Uma hipoteca é um empréstimo usado para comprar uma casa. A casa serve como garantia para o empréstimo, e você paga a hipoteca ao longo do tempo, incluindo juros.";
+            } else if (pergunta.includes("benefícios da meditação mindfulness")) {
+                resposta = "Os benefícios da meditação mindfulness incluem redução do estresse, aumento da consciência, melhor foco e bem-estar geral.";
+            } else if (pergunta.includes("plano de marketing")) {
+                resposta = "Um plano de marketing é um documento que descreve as estratégias e táticas para promover um produto ou serviço. Ele inclui análise de mercado, objetivos e estratégias de promoção.";
+            } else if (pergunta.includes("diferença entre coaching e aconselhamento psicológico")) {
+                resposta = "Coaching foca em metas e desenvolvimento pessoal, enquanto aconselhamento psicológico lida com questões emocionais e mentais mais profundas.";
+            } else if (pergunta.includes("sustentabilidade")) {
+                resposta = "Sustentabilidade envolve ações para proteger o meio ambiente e preservar recursos naturais para as futuras gerações.";
+            } else if (pergunta.includes("sopa de legumes")) {
+                resposta = "Para fazer uma sopa de legumes, cozinhe legumes em caldo, bata até ficar cremoso e tempere a gosto. Adicione ingredientes saudáveis, como cenoura e espinafre.";
+            } else if (pergunta.includes("sintomas da asma")) {
+                resposta = "Os sintomas da asma incluem falta de ar, chiado no peito, tosse e aperto no peito. É uma condição crônica dos pulmões.";
+            } else if (pergunta.includes("habilidade de tomar decisões")) {
+                resposta = "Você pode melhorar sua habilidade de tomar decisões através da prática, análise de opções, consideração de consequências e aprendizado com experiências anteriores.";
+            } else if (pergunta.includes("diferença entre uma dieta paleo e uma dieta cetogênica")) {
+                resposta = "A dieta paleo enfatiza alimentos não processados e elimina grãos e laticínios, enquanto a dieta cetogênica é rica em gorduras e extremamente baixa em carboidratos.";
+            } else if (pergunta.includes("marketing de conteúdo")) {
+                resposta = "Marketing de conteúdo é uma estratégia que envolve a criação e distribuição de conteúdo relevante para atrair e engajar o público-alvo.";
+            } else if (pergunta.includes("ritmo de estudo")) {
+                resposta = "Para organizar seu ritmo de estudo, crie um cronograma, defina metas e mantenha um ambiente de estudo produtivo.";
+            } else if (pergunta.includes("benefícios da terapia de casal")) {
+                resposta = "Os benefícios da terapia de casal incluem melhoria na comunicação, resolução de conflitos e fortalecimento do relacionamento.";
+            } else if (pergunta.includes("viagem de aventura")) {
+                resposta = "Para planejar uma viagem de aventura, escolha destinos emocionantes, prepare-se para desafios e aproveite experiências únicas.";
+            } else if (pergunta.includes("diferença entre um contrato e um acordo")) {
+                resposta = "Um contrato é um acordo legalmente vinculativo com termos específicos, enquanto um acordo pode ser menos formal e não necessariamente vinculativo.";
+            } else if (pergunta.includes("cartão de crédito")) {
+                resposta = "Um cartão de crédito permite fazer compras a crédito, pagando o valor devido posteriormente com juros.";
+            } else if (pergunta.includes("smoothie saudável")) {
+                resposta = "Um smoothie saudável pode conter ingredientes como frutas, vegetais, iogurte e proteína em pó, oferecendo uma opção nutritiva.";
+            } else if (pergunta.includes("sintomas da artrite")) {
+                resposta = "Os sintomas da artrite incluem dor nas articulações, inchaço, rigidez e redução da mobilidade. Existem diferentes tipos de artrite.";
+            } else if (pergunta.includes("habilidade de falar em público")) {
+                resposta = "Melhorar a habilidade de falar em público envolve prática, preparação, controle do nervosismo e feedback.";
+            } else if (pergunta.includes("branding")) {
+                resposta = "Branding é o processo de criação de uma identidade de marca única para atrair e fidelizar clientes.";
+            } else if (pergunta.includes("plano de negócios")) {
+                resposta = "Um plano de negócios é um documento que descreve a visão, metas, estratégias e plano financeiro de uma empresa.";
+            } else if (pergunta.includes("reciclagem")) {
+                resposta = "Reciclagem envolve coletar e reprocessar materiais para reduzir o desperdício e proteger o meio ambiente.";
+            } else if (pergunta.includes("salada nutritiva")) {
+                resposta = "Uma salada nutritiva pode incluir uma variedade de vegetais, proteínas magras e um molho saudável.";
+            } else if (pergunta.includes("sintomas da doença de Alzheimer")) {
+                resposta = "Os sintomas da doença de Alzheimer incluem perda de memória, confusão, alterações de humor e dificuldade em realizar tarefas diárias.";
+            } else if (pergunta.includes("organizar guarda-roupa")) {
+                resposta = "Organizar um guarda-roupa envolve limpeza, categorização de roupas e uso de organizadores para manter tudo em ordem.";
+            } else if (pergunta.includes("diferença entre um diploma e um certificado")) {
+                resposta = "Um diploma é uma credencial de conclusão de um curso superior, enquanto um certificado geralmente é obtido após a conclusão de um programa de estudo mais curto.";
+            } else if (pergunta.includes("fundo de investimento")) {
+                resposta = "Um fundo de investimento é uma pool de dinheiro de vários investidores usado para comprar uma variedade de ativos financeiros.";
+            } else if (pergunta.includes("lanche ao ar livre")) {
+                resposta = "Para fazer um lanche ao ar livre, escolha alimentos práticos e embalagens adequadas, como sanduíches, frutas e snacks saudáveis.";
+            } else if (pergunta.includes("benefícios da terapia ocupacional")) {
+                resposta = "A terapia ocupacional oferece benefícios como melhoria da independência funcional e desenvolvimento de habilidades para lidar com desafios físicos ou cognitivos.";
+            } else if (pergunta.includes("plano de gerenciamento de projetos")) {
+                resposta = "Um plano de gerenciamento de projetos é um documento que descreve objetivos, escopo, cronograma, orçamento e recursos para o sucesso de um projeto.";
+            } else if (pergunta.includes("energia eólica")) {
+                resposta = "Energia eólica é gerada a partir do vento, capturada por turbinas e transformada em eletricidade.";
+            } else if (pergunta.includes("habilidade de resolver problemas")) {
+                resposta = "Aprimorar a habilidade de resolver problemas envolve pensamento crítico, identificação de soluções e aprendizado contínuo.";
+            } else if (pergunta.includes("sintomas da síndrome de Burnout")) {
+                resposta = "Os sintomas da síndrome de Burnout incluem exaustão, falta de motivação, redução do desempenho e sentimentos de desespero no trabalho.";
+            } else if (pergunta.includes("criar um site para minha empresa")) {
+                resposta = "Para criar um site para sua empresa, você pode contratar um web designer ou usar plataformas de criação de sites, como WordPress, Wix ou Squarespace.";
+            }
+
+            if (resposta === "") {
+                resposta = "Desculpe, não entendi sua pergunta ou não tenho uma resposta para isso no momento.";
+            }
+
+            document.getElementById("resposta").textContent = resposta;
+        }
+    </script>
+</body>
+</html>
